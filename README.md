@@ -1,4 +1,4 @@
-# Gestor de Calificaciones
+![](https://github.com/vnaj16/Gestor-de-Calificaciones/blob/master/Imagenes%20Wiki/Presentation_Wiki_GC.png)
 Proyecto que te permite llevar un control de las calificaciones obtenidas durante la carrera universitaria.
 
 Con GC puedes
