@@ -6,3 +6,7 @@ Con GC puedes
  * Ingresar las calificaciones oficiales de cada curso
  * Probar calificaciones para ver posibles promedios
  * Calcular el promedio ponderado
+
+
+# ¿Cómo Instalar?
+...
