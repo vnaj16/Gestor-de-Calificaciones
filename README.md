@@ -9,4 +9,12 @@ Con GC puedes
 
 
 # ¿Cómo Instalar?
-...
+## Requisitos
+* SQL Server
+* Visual Studio Code
+
+## Pasos
+* Descargar el archivo comprimido, ahí si encuentra el instalador y el script de la base de datos
+* Abrir el script en SQL Server Management Studio y crear la base de datos (modificar la dirección de creación para que concuerde con la computadora)
+* Instalar la aplicación, luego ir a la ubicación donde se ha instalado
+* Editar el archivo .config como administrador (se recomienda usar VS Code) y colocar la nueva cadena de conexión (guiarse del archivo "cadena de conexión")
