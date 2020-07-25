@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "Presentacion\Presentacion.csproj", "{58EA4E45-0382-4904-A727-08E695E9154C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dekstop_App", "Dekstop_App", "{6ED88523-111F-41B9-8DD3-E27DA99496D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web_App", "Web_App", "{432AE0A0-F1D4-4B29-B783-4B2806074047}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{42F2A3FC-9B46-48F3-B551-C0B1281A197F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +42,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7320B83-3757-4E78-A68E-4B6FC15A60C4} = {6ED88523-111F-41B9-8DD3-E27DA99496D5}
+		{37971B68-E810-4436-BBFB-E9DB6278689E} = {6ED88523-111F-41B9-8DD3-E27DA99496D5}
+		{0477C5C8-0BDA-4448-8BC1-4B7138B12134} = {6ED88523-111F-41B9-8DD3-E27DA99496D5}
+		{58EA4E45-0382-4904-A727-08E695E9154C} = {6ED88523-111F-41B9-8DD3-E27DA99496D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C1BAC5A-55F2-42DA-B292-838A9E9FEBF3}
