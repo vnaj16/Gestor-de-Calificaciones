@@ -49,28 +49,37 @@ namespace Presentacion
 
         public MainWindow()
         {
-            InitializeComponent();
-            viewManager = new ViewManager(Button_Initial: Button_VerInfo);
-            viewManager.SetStyles(this.FindResource("Style_Button_Normal") as Style, this.FindResource("Style_Button_Selected") as Style);
-            List_Grid = new List<Grid>() { Grid_VerInformacion, Grid_RegistrarNotas, Grid_RegistrarCiclo };//Aca agrego las views(grids) para llevar el control de las views
-            
-            string Periodo = DateTime.Today.Year + "-0" + (DateTime.Today.Month < 8 ? 1 : 2);//Veo que periodo es el actual
+            try
+            {
+                InitializeComponent();
+                viewManager = new ViewManager(Button_Initial: Button_VerInfo);
+                viewManager.SetStyles(this.FindResource("Style_Button_Normal") as Style, this.FindResource("Style_Button_Selected") as Style);
+                List_Grid = new List<Grid>() { Grid_VerInformacion, Grid_RegistrarNotas, Grid_RegistrarCiclo };//Aca agrego las views(grids) para llevar el control de las views
 
-            /////////VER INFORMACION
-            /////////////////////////
-            ComboBox_Ciclo_VerInfo.ItemsSource = Ciclo_Controller.GetCiclos();
-            //Selecciono el ciclo actual
-            ComboBox_Ciclo_VerInfo.SelectedItem = (ComboBox_Ciclo_VerInfo.ItemsSource as List<eCiclo>).Find(x => x.Periodo == Periodo);
+                string Periodo = DateTime.Today.Year + "-0" + (DateTime.Today.Month < 8 ? 1 : 2);//Veo que periodo es el actual
 
-            /////////REGISTRAR NOTA
-            /////////////////////////
-            ComboBox_Ciclo_RegistrarNota.ItemsSource = Ciclo_Controller.GetCiclos();
-            //Selecciono el ciclo actual
-            ComboBox_Ciclo_RegistrarNota.SelectedItem = (ComboBox_Ciclo_RegistrarNota.ItemsSource as List<eCiclo>).Find(x => x.Periodo == Periodo);
+                /////////VER INFORMACION
+                /////////////////////////
+                ComboBox_Ciclo_VerInfo.ItemsSource = Ciclo_Controller.GetCiclos();
+                //Selecciono el ciclo actual
+                ComboBox_Ciclo_VerInfo.SelectedItem = (ComboBox_Ciclo_VerInfo.ItemsSource as List<eCiclo>).Find(x => x.Periodo == Periodo);
 
-            /////////REGISTRAR CICLO
-            /////////////////////////
-            ComboBox_Ciclos_RegistrarCiclo.ItemsSource = Ciclo_Controller.GetCiclos();
+                /////////REGISTRAR NOTA
+                /////////////////////////
+                ComboBox_Ciclo_RegistrarNota.ItemsSource = Ciclo_Controller.GetCiclos();
+                //Selecciono el ciclo actual
+                ComboBox_Ciclo_RegistrarNota.SelectedItem = (ComboBox_Ciclo_RegistrarNota.ItemsSource as List<eCiclo>).Find(x => x.Periodo == Periodo);
+
+                /////////REGISTRAR CICLO
+                /////////////////////////
+                ComboBox_Ciclos_RegistrarCiclo.ItemsSource = Ciclo_Controller.GetCiclos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.InnerException?.Message);
+            }
+
         }
 
         ///////////CUESTIONES DE DESIGN O ANIMACION///////////

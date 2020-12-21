@@ -60,7 +60,7 @@
     <StartupObject>Presentacion.App</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>4EBAA7154173D88518F83A22025F5E424531B780</ManifestCertificateThumbprint>
